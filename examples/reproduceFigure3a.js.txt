@@ -1,0 +1,29 @@
+[AsyncG] L,0,(*internal/modules/cjs/loader.js:729:18:746:2)
+[AsyncG] N,0,R,setInterval_10,(analysis/ag-jalangi/examples/reproduceFigure3a.js:21:1:24:7),1713568869:-510996210:
+[AsyncG] N,1,R,process.nextTick,(analysis/ag-jalangi/examples/reproduceFigure3a.js:11:5:11:33),1863655430:878389250:
+[AsyncG] L,1,(*internal/process/next_tick.js:41:3:71:4)
+[AsyncG] N,2,C,compute,(analysis/ag-jalangi/examples/reproduceFigure3a.js:7:1:16:2)
+[AsyncG] E,R,1,2
+[AsyncG] N,3,R,process.nextTick,(analysis/ag-jalangi/examples/reproduceFigure3a.js:11:5:11:33),1863655430:878389250:
+[AsyncG] E,H,2,3
+[AsyncG] L,2,nextTick
+[AsyncG] W,3,recursive nextTick
+[AsyncG] N,4,C,compute,(analysis/ag-jalangi/examples/reproduceFigure3a.js:7:1:16:2)
+[AsyncG] E,R,3,4
+[AsyncG] N,5,R,process.nextTick,(analysis/ag-jalangi/examples/reproduceFigure3a.js:11:5:11:33),1863655430:878389250:
+[AsyncG] E,H,4,5
+[AsyncG] L,3,nextTick
+[AsyncG] W,5,recursive nextTick
+[AsyncG] N,6,C,compute,(analysis/ag-jalangi/examples/reproduceFigure3a.js:7:1:16:2)
+[AsyncG] E,R,5,6
+[AsyncG] N,7,R,process.nextTick,(analysis/ag-jalangi/examples/reproduceFigure3a.js:11:5:11:33),1863655430:878389250:
+[AsyncG] E,H,6,7
+[AsyncG] L,4,nextTick
+[AsyncG] W,7,recursive nextTick
+[AsyncG] N,8,C,compute,(analysis/ag-jalangi/examples/reproduceFigure3a.js:7:1:16:2)
+[AsyncG] E,R,7,8
+[AsyncG] N,9,R,process.nextTick,(analysis/ag-jalangi/examples/reproduceFigure3a.js:11:5:11:33),1863655430:878389250:
+[AsyncG] E,H,8,9
+[AsyncG] L,5,nextTick
+[AsyncG] W,9,recursive nextTick
+[AsyncG] {"enabledAPIs":{"process.nextTick":{"numRegistered":5,"numExecuted":4},"setTimeout":{"numRegistered":0,"numExecuted":0},"setInterval":{"numRegistered":1,"numExecuted":0},"setImmediate":{"numRegistered":0,"numExecuted":0},"Emitter.on":{"numRegistered":0,"numExecuted":0},"Promise":{"numRegistered":0,"numExecuted":0},"Promise.catch":{"numRegistered":0,"numExecuted":0},"Promise.then":{"numRegistered":0,"numExecuted":0}}}

@@ -1,0 +1,68 @@
+
+.tick_border {
+  stroke: #555555;
+  stroke-width:1;
+}
+
+.node {
+  cursor: help;
+}
+.node_warning {
+  color: red;
+}
+.node_reg {
+  fill: #ffffff;
+  stroke: #555555;
+  stroke-width:2;
+}
+
+.node_cb {
+  fill: #ffffff;
+  stroke: #555555;
+  stroke-width:2;
+}
+
+.node_obj {
+  fill: #ffffff;
+  stroke: #000000;
+  stroke-width:15;
+}
+
+.node_action {
+  fill:black;
+  /* stroke:purple; */
+  /* stroke-width:5; */
+  /* fill-rule:evenodd; */
+}
+
+.node_selected {
+  fill: #ff7f0e;
+  stroke: #ff7f0e;
+}
+
+.drag_line {
+  stroke: #999;
+  stroke-width: 5;
+  pointer-events: none;
+}
+
+.drag_line_hidden {
+  stroke: #999;
+  stroke-width: 0;
+  pointer-events: none;
+}
+
+.link {
+  stroke: #333333;
+  stroke-width: 2;
+  cursor: crosshair;
+}
+
+
+.link_O {
+  stroke-dasharray: 3,3;
+}
+
+.link_selected {
+  stroke: #ff7f0e;
+}

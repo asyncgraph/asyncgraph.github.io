@@ -1,0 +1,6 @@
+
+.CodeMirror { height: auto; border: 1px solid #ddd; }
+.CodeMirror-scroll { max-height: auto; }
+.CodeMirror pre { padding-left: 7px; line-height: 2; }
+
+.code-highlight { background-color: "red"}

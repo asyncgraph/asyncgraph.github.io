@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+<title>Async Graph</title>
+<style>
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.mycontainer {
+  width:100%;
+  height: auto;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.mytop {
+  width: 100%;
+  float: left;
+}
+
+.mybottom {
+  float: left;
+  width: 100%;
+
+  overflow-x: scroll;
+}​​
+
+#codeLeft {
+  float: left;
+  width: 45%;
+}
+
+#codeRight {
+  float: left;
+  width: 45%;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+#chart {
+  height: 500px;
+  width: 100%;
+  border:1px solid #222;
+  overflow: scroll;
+}
+</style>
+
+<link type="text/css" rel="stylesheet" href="stylesheets/graph.css">
+
+<link type="text/css" rel="stylesheet" href="stylesheets/codemirror.css">
+
+<link type="text/css" rel="stylesheet" href="lib/codemirror/lib/codemirror.css">
+
+<script type="text/javascript" src="lib/codemirror/lib/codemirror.js"></script>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+
+<link type="text/css" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+
+<script type="text/javascript" src="lib/codemirror/mode/javascript/javascript.js"></script>
+
+<script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+
+
+<head>
+<body>
+  <h1>AsyncG</h1>
+  <p>
+  </p>
+  <div class="mymenu" id="menu">
+    <span class="dropdown">
+      <button class="btn btn-default dropdownbtn" id="reproduceBtn">reproduce</button>
+      <div class="dropdown-menu" id="reproduceDropdown">
+
+        <a class="dropdown-item" href="#">Figure3a</a>
+        <a class="dropdown-item" href="#">Figure3b</a>
+        <a class="dropdown-item" href="#">Figure4a</a>
+        <a class="dropdown-item" href="#">Figure4b</a>
+      </div>
+    </span>
+    <span class="dropdown">
+      <button class="btn btn-default dropdownbtn" id="promiseBtn">promise</button>
+      <div class="dropdown-menu" id="promiseDropdown">
+
+        <a class="dropdown-item" href="#">DeadPromise</a>
+        <a class="dropdown-item" href="#">MissingReaction</a>
+        <a class="dropdown-item" href="#">MissingExceptionHandler</a>
+        <a class="dropdown-item" href="#">MissingReturnInThen</a>
+        <a class="dropdown-item" href="#">AsyncAwait</a>
+        <a class="dropdown-item" href="#">AsyncAwait2</a>
+        <a class="dropdown-item" href="#">Chain1</a>
+        <a class="dropdown-item" href="#">Chain2</a>
+        <a class="dropdown-item" href="#">Chain3</a>
+        <a class="dropdown-item" href="#">Chain4</a>
+
+        <a class="dropdown-item" href="#">Chain5</a>
+      </div>
+    </span>
+    <span class="dropdown">
+      <button class="btn btn-default dropdownbtn" id="emitterBtn">emitter</button>
+      <div class="dropdown-menu" id="emitterDropdown">
+      <a class="dropdown-item" href="#">1</a>
+      <a class="dropdown-item" href="#">2</a>
+      <a class="dropdown-item" href="#">DeadEmit</a>
+      <a class="dropdown-item" href="#">EarlyEmit</a>
+      </div>
+    </span>
+    <span class="dropdown">
+      <button class="btn btn-default dropdownbtn" id="othersBtn">others</button>
+      <div class="dropdown-menu" id="othersDropdown">
+        <a class="dropdown-item" href="#">1</a>
+      </div>
+    </span>
+    <button id="fileModalBtn" onclick="openFileLoaderDialog()" class="btn btn-default">
+      Custom File Upload
+    </button>
+  </div>
+  <div class="mycontainer">
+  <div class="mytop" id="codediv">
+      <div id="codeRight">
+          <textarea id="codepanel">
+
+// click the button above to load an example
+
+// click the nodes to see details (such as the source section or warnings)
+
+
+        </textarea>
+      </div>
+      <div id="codeLeft">
+          <textarea id="codepanel2">
+// graph node region
+        </textarea>
+      </div>
+    </div>
+    <br/>
+    <div class="mybottom" id="outputdiv">
+      <div id="chart">
+      </div>
+    </div>
+  </div>
+
+  <div id="fileModal" class="modal">
+      <div class="modal-content">
+          <span>Load custom source code: </span><input type="file" id="inputCodeFile" onchange="handleFile(0, this.files)">
+          <br/>
+          <span>Load AsyncG log file for custom source code:  </span><input type="file" id="inputLogFile" onchange="handleFile(1, this.files)">
+          <br/>
+          <span class="btn" onClick="doConfirm(true)">Load</span>
+          <span class="btn" onClick="doConfirm(false)">Close</span>
+      </div>
+  </div>
+
+  <script type="text/javascript" src="js/graph.js"></script>
+  <script type="text/javascript" src="js/loadlayout.js"></script>
+  <script type="text/javascript" src="js/fileloader.js"></script>
+</body>
+</html>

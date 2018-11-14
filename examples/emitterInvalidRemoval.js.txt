@@ -1,0 +1,15 @@
+[AsyncG] L,0,(*internal/modules/cjs/loader.js:729:18:746:2)
+[AsyncG] N,1,E,1,(analysis/ag-jalangi/examples/emitterInvalidRemoval.js:5:9:5:17)
+[AsyncG] E,O,1,2
+[AsyncG] N,2,R,foo,(analysis/ag-jalangi/examples/emitterInvalidRemoval.js:6:1:6:17),1136005694:1046759841:
+[AsyncG] E,O,1,3
+[AsyncG] N,3,R,bar,(analysis/ag-jalangi/examples/emitterInvalidRemoval.js:8:1:8:20),426019904:1184911172:
+[AsyncG] X,4,foo,1136005694,1046759841
+[AsyncG] E,X,1,4,remove_foo
+[AsyncG] X,5,bar,1642679791,1184911172
+[AsyncG] E,X,1,5,remove_bar
+[AsyncG] L,1,(*internal/process/next_tick.js:41:3:71:4)
+[AsyncG] L,2,(*internal/process/next_tick.js:41:3:71:4)
+[AsyncG] L,3,(*events.js:140:31:191:2)
+[AsyncG] L,4,(*events.js:140:31:191:2)
+[AsyncG] {"enabledAPIs":{"process.nextTick":{"numRegistered":0,"numExecuted":0},"setTimeout":{"numRegistered":0,"numExecuted":0},"setInterval":{"numRegistered":0,"numExecuted":0},"setImmediate":{"numRegistered":0,"numExecuted":0},"Emitter.on":{"numRegistered":2,"numExecuted":0},"Promise":{"numRegistered":0,"numExecuted":0},"Promise.catch":{"numRegistered":0,"numExecuted":0},"Promise.then":{"numRegistered":0,"numExecuted":0}}}
