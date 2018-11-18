@@ -1,22 +1,7 @@
-const codeReader = new FileReader();
-const logReader = new FileReader();
+
 var codeFile = logFile = null;
 
 var fileModal = document.getElementById('fileModal');
-
-codeReader.onload = function(e) {
-    var code = codeReader.result;
-    myCodeMirror.setValue(code);
-    myCodeMirror.refresh();
-}
-
-logReader.onload = function(e) {
-    var log = logReader.result;
-    var logProcessed = loadLog(log);
-    myCodeMirror2.setValue(logProcessed.join("\n"));
-    myCodeMirror2.refresh();
-}
-
 function handleFile(type, files){
     if(files.length == 0){
         alert("Error loading file");
@@ -35,20 +20,40 @@ function handleFile(type, files){
 }
 
 function openFileLoaderDialog(){
-    var codeFile = logFile = null;
     fileModal.style.display = "block";
     // open dialog
 }
 
 function loadCustomCode(){
+    var codeReader = new FileReader();
+
+    codeReader.onload = function(e) {
+        var code = codeReader.result;
+        myCodeMirror.setValue(code);
+        myCodeMirror.refresh();
+    }
+
     if(codeFile === null){
         alert('code file not loaded');
-    }
-    if(logFile === null){
-        alert('log file not loaded');
+        return;
     }
     codeReader.readAsText(codeFile);
+
+    var logReader = new FileReader();
+    logReader.onload = function(e) {
+        var log = logReader.result;
+        var logProcessed = loadLog(log);
+        myCodeMirror2.setValue(logProcessed.join("\n"));
+        myCodeMirror2.refresh();
+    }
+
+    if(logFile === null){
+        alert('log file not loaded');
+        return;
+    }
     logReader.readAsText(logFile);
+
+
     fileModal.style.display = "none";
 }
 

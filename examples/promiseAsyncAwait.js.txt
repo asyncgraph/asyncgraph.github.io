@@ -4,7 +4,7 @@
 [AsyncG] N,4,A,resolve,(analysis/ag-jalangi/examples/promiseAsyncAwait.js:2:10:2:28)
 [AsyncG] E,O,4,3,action
 [AsyncG] E,O,3,1,link
-[AsyncG] N,5,R,Promise.then_10,(analysis/ag-jalangi/examples/promiseAsyncAwait.js:5:1:9:2),1393828949:1841966453:
+[AsyncG] N,5,R,Promise.then_10,(analysis/ag-jalangi/examples/promiseAsyncAwait.js:5:1:9:2),1570470538:1841966453:
 [AsyncG] N,7,P,p2,(analysis/ag-jalangi/examples/promiseAsyncAwait.js:5:1:9:2)
 [AsyncG] E,O,5,7,creates
 [AsyncG] E,O,1,7,then
@@ -17,7 +17,4 @@
 [AsyncG] E,O,11,7,action
 [AsyncG] N,11,A,resolve,
 [AsyncG] E,H,10,11
-[AsyncG] L,2,(*internal/process/next_tick.js:41:3:71:4)
-[AsyncG] L,3,(*events.js:140:31:191:2)
-[AsyncG] L,4,(*events.js:140:31:191:2)
 [AsyncG] {"enabledAPIs":{"process.nextTick":{"numRegistered":0,"numExecuted":0},"setTimeout":{"numRegistered":0,"numExecuted":0},"setInterval":{"numRegistered":0,"numExecuted":0},"setImmediate":{"numRegistered":0,"numExecuted":0},"Emitter.on":{"numRegistered":0,"numExecuted":0},"Promise":{"numRegistered":4,"numExecuted":0},"Promise.catch":{"numRegistered":0,"numExecuted":0},"Promise.then":{"numRegistered":1,"numExecuted":1}}}

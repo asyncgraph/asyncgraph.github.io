@@ -2,8 +2,4 @@
 [AsyncG] N,1,E,1,(analysis/ag-jalangi/examples/emitterDeadEmit.js:3:19:3:37)
 [AsyncG] N,2,A,emit:event,(analysis/ag-jalangi/examples/emitterDeadEmit.js:5:1:5:24)
 [AsyncG] E,O,1,2,emit
-[AsyncG] L,1,(*internal/process/next_tick.js:41:3:71:4)
-[AsyncG] L,2,(*internal/process/next_tick.js:41:3:71:4)
-[AsyncG] L,3,(*events.js:140:31:191:2)
-[AsyncG] L,4,(*events.js:140:31:191:2)
 [AsyncG] {"enabledAPIs":{"process.nextTick":{"numRegistered":0,"numExecuted":0},"setTimeout":{"numRegistered":0,"numExecuted":0},"setInterval":{"numRegistered":0,"numExecuted":0},"setImmediate":{"numRegistered":0,"numExecuted":0},"Emitter.on":{"numRegistered":0,"numExecuted":0},"Promise":{"numRegistered":0,"numExecuted":0},"Promise.catch":{"numRegistered":0,"numExecuted":0},"Promise.then":{"numRegistered":0,"numExecuted":0}}}
