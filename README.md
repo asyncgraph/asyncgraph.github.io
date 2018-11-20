@@ -19,4 +19,6 @@ To visualize the async graph of an arbitrary Node.js file the website applicatio
 
 ## Run the generator locally:
 
-The async graph generator can be run locally simply by opening the ```index.html``` file in a web browser.
+The async graph generator can be run locally simply by opening the ```index.html``` file in a web browser. 
+In this case, running it with Firefox is suggested.
+As the current website uses API _fetch_ to load the local logs. However, when ran locally, some browsers do not allow loading static local files with _fetch_, e.g., you might need add an option _--allow-file-access-from-files_ for Chrome to make the tool work properly locally.
